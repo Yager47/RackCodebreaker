@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Codebreaker</title>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/application.css">
+	</head>
+
+	<body>
+		<div id="container">
+			
+			<h1>Codebreaker</h1>
+			<h2><%= chances %> chances left</h2>
+			
+			<form method="post" action="/guess">
+				Enter your guess:<br />
+				<input name="guess" type="text" size ="4"><br />
+				<input type="submit" value="OK">
+			</form>
+
+			<p>
+				<h2>History</h2>
+				<% history.each do |line| %>
+					<%= line %><br />
+				<% end %>
+			</p>
+
+		</div>
+	</body>
+
+</html>
